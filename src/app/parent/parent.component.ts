@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-parent',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parent.component.scss']
 })
 export class ParentComponent implements OnInit {
-
+  @ViewChild('viewComponent', { static: true }) viewComponent: ElementRef;
   public parentData;
   data: any;
   Data: any;
@@ -14,7 +14,10 @@ export class ParentComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
 
+  changeMainContent() {
+    this.viewComponent.nativeElement.setAttribute("style", "color:red");
   }
 
   sendData(event) {

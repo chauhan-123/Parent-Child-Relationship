@@ -11,3 +11,10 @@ Parent Data:<input type="text" name="firstname"><br>
 <input type="text" #ptext (input)="sendData($event)">
 <p>Value from Child Component is:: => {{data}} </p>
 <app-child [parentData]="Data" (childData)="getdata($event)"></app-child>
+
+
+<p #viewComponent>
+    change the color
+</p>
+
+<button (click)="changeMainContent()">Change main content</button>
