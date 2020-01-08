@@ -1,0 +1,13 @@
+<!-- <app-child [parentData]="parentData" (childData)="getdata($event)"></app-child><br>
+Parent Data:<input type="text" name="firstname"><br>
+<input type="submit">
+
+<h1>{{data}}</h1> -->
+
+
+<h1>Hello</h1>
+<h2>Parent Component</h2>
+<label>Enter parent component value</label>
+<input type="text" #ptext (input)="sendData($event)">
+<p>Value from Child Component is:: => {{data}} </p>
+<app-child [parentData]="Data" (childData)="getdata($event)"></app-child>

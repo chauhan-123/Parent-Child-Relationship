@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Input-output-concept';
+
+  public sendtodataparent = "from parent side"
+
+  gatdata(value) {
+    console.log(value, 'value');
+  }
 }
