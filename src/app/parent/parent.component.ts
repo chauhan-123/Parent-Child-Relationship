@@ -14,6 +14,7 @@ export class ParentComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log('testing for checkin for merging..')
   }
 
   changeMainContent() {
